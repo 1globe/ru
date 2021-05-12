@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <title>1Globe</title>
   <script type="text/javascript">
-    location.href = "/site";
+    const url = new URL("../site", location.href)
+    location.href = url.href;
   </script>
 </head>
 <body>
