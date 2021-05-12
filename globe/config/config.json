@@ -16,9 +16,9 @@
     "yandexApiKey": "9fb88eac-53c5-42d7-827b-31b31ecda32f",
     "bingMapsKey": "AikP8CgzYAaw5f7MxBnOGc_jrjfTz-2Q-2fbfWIf1kLkPKylFwqNGhXt-XJtO-gC",
     "ipinfoUrl": "https://ipinfo.io/json?token=",
-    "yandexUrl": "https://geocode-maps.yandex.ru/1.x/?format=json&apikey=",
-    "bingMapsUrl": "https://dev.virtualearth.net/REST/v1/Locations?key=",
-    "osmMapsUrl":  "https://nominatim.openstreetmap.org/search?format=json"
+    "yandexUrl": "https://geocode-maps.yandex.ru/1.x/?lang=ru_RU&format=json&apikey=",
+    "bingMapsUrl": "https://dev.virtualearth.net/REST/v1/Locations?culture=ru&key=",
+    "osmMapsUrl":  "https://nominatim.openstreetmap.org/search?accept-language=ru-RU&format=json"
   },
   "elevation": {
     "active": "default",
