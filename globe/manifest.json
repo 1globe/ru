@@ -1,8 +1,8 @@
 {
  "name": "1Globe",
  "display" : "standalone",
- "scope" : "https://192.168.0.12:8800/globe/",
- "start_url" : "https://192.168.0.12:8800/globe/",
+ "scope" : "https://1globe.github.io/ru/globe/",
+ "start_url" : "https://1globe.github.io/ru/globe/",
  "short_name" : "1Globe",
  "description" : "Globe Earth explorer",
  "theme_color" : "rgb(31, 71, 150)",
