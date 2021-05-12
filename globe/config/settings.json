@@ -1,0 +1,7 @@
+{
+  "geolocation": false,
+  "imageryCaching": true,
+  "pwa": false,
+  "elevation": "default",
+  "standalone": false
+}

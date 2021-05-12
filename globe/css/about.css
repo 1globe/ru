@@ -1,0 +1,14 @@
+html,
+body {
+  font-size: medium;
+}
+
+h4 {
+  font-size: 0.9rem;
+}
+p {
+  font-size: 0.8rem;
+  color: lightgray;
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
+}

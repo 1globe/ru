@@ -1,0 +1,245 @@
+html,
+body {
+  font-size: medium;
+  /* background: rgb(20, 20, 20); */
+}
+
+.header-contener {
+  min-height: 34px;
+  border-bottom: 2px solid rgb(70, 80, 100);
+  /* margin: 0px 20px 0px 10px; */
+  padding: 10px 10px 0px 10px;
+  /* background-color: rgb(40, 43, 48); */
+}
+.main-contener {
+  position: absolute;
+  height: calc(100% - 50px);
+  bottom: 50px;
+  left: 2px;
+  right: 10px;
+  /*padding-top: 10px;*/
+}
+.footer-contener {
+  position: absolute;
+  bottom: 0;
+  min-height: 50px;
+  width: 100%;
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 20px;
+  background-color: rgb(40, 40, 40);
+  /* border-top: 1px solid rgb(62, 68, 82); */
+}
+
+.header-title {
+  font-family: Sans-Serif;
+  font-size: 1.2rem;
+  padding-bottom: 4px;
+  border-bottom: 2px solid rgb(90, 144, 253);
+}
+
+.settings-img {
+  vertical-align: baseline;
+  margin: 0px 2px 0px -12px;
+}
+.button {
+  color: white;
+  cursor: pointer;
+}
+.button>svg {
+  width: 16px;
+  height: 16px;
+  fill: white;
+  outline: none;
+}
+
+.row, .nav, .nav-content, .row-content, .tab-content, .tab-pane {
+  height: 100%;
+}
+.nav-content {
+  border-right: 1px solid rgb(50, 60, 70);
+}
+.nav {
+  display: block;
+  overflow-y: auto;
+}
+.tab-pane {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background-color: rgb(30, 70, 150);
+  border-left: 2px solid rgb(90, 144, 253);
+  border-radius: 0;
+  color: rgb(234, 241, 255);
+  padding-left: 0.9rem;
+}
+.nav-pills a {
+  color: white;
+  text-decoration: none;
+}
+.nav-link {
+  padding: 0.1rem 1rem;
+}
+.nav-link:hover {
+  padding: 0.1rem 1rem;
+  color: rgb(182, 206, 255)
+}
+
+
+button.btn {
+  width: 80px;
+}
+.btn-primary {
+  background-color: rgb(32, 66, 151);
+  border-color: #385370;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: rgb(79, 128, 218);
+  border-color: #5da7f7;
+}
+
+h4 {
+  font-size: 0.9rem;
+}
+p {
+  font-size: 0.8rem;
+  color: lightgray;
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
+}
+
+label.btn {
+  width: 44px;
+}
+.item-settings {
+  padding: 0px 10px 0px 10px;
+}
+.layer-prop {
+  padding: 0px 10px 0px 20px;
+}
+.layer-tooltip {
+  color: white;
+  padding: 0px 10px 0px 20px;
+}
+.layer-text-contener {
+  overflow: auto;
+}
+.layer-text {
+  padding: 0px 10px 0px 30px;
+  text-align: justify;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+}
+.layer-link {
+  padding: 0px 10px 0px 30px;
+}
+
+.layers-list-contener {
+  width: 40%;
+  height: calc(100% - 30px);
+  float: left;
+}
+.layers-select {
+  width: 100%;
+  height: 100%;
+  color: rgb(200, 200, 200);
+  outline: none;
+  background-color: transparent;
+}
+.layers-option-active {
+  color: whitesmoke;
+}
+.layers-option-visible {
+  color: lightskyblue;
+}
+.layers-props-contener {
+  width: 60%;
+  height: 100%;
+  float: left;
+  color: whitesmoke;
+}
+.layers-props-header {
+  margin-left: 10px;
+}
+.layer-prop-name {
+  font-size: medium;
+}
+/*
+.scroll {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  overflow: auto;
+  border: 1px solid rgb(60, 90, 140);
+}
+*/
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  width: 36px;
+  height: 20px;
+}
+.item-switch {
+  float: right;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(80, 80, 80);
+  border: 1px solid rgb(60, 90, 140);
+  -webkit-transition: .4s;
+  transition: .4s;
+  font-size: x-small;
+  padding: 1px 0px 0px 4px;
+  color: whitesmoke;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  bottom: 2px;
+  background-color: rgb(78, 163, 255);
+  border: 1px solid rgb(133, 182, 255);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider-disabled:before {
+  background-color: rgb(120, 120, 120);
+  border: 1px solid rgb(130, 130, 130);
+}
+input:checked + .slider {
+  background-color: rgb(30, 70, 150);
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px rgb(30, 70, 150);
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>1Globe - Settings</title>
+  
+  <link rel="shortcut icon" href="#">
+  <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/common.css" rel="stylesheet">
+  <link href="css/settings.css" rel="stylesheet">
+
+  <script src="libs/jquery/jquery-3.5.1.min.js"></script>
+  <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="scripts/settings.js"></script>
+  <script src="scripts/locale/ru/dictionaryRu.js"></script>
+</head>
+<body>
+  <div class="main-contener">
+    <div class="row">
+      <div class="col-3 nav-content">
+        <div class="nav nav-pills" id="v-pills-tab">
+          <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#t-basic" trans="s_1">Basic</a>
+          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#t-layers" trans="s_2">Layers</a>
+          <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#t-cache" trans="s_3">Cache</a>
+        </div>
+      </div>
+      <div class="col-9 row-content">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="t-basic">
+            <h4 trans="sb_1">
+              Internet Geolocation
+            </h4>
+            <label class="switch item-switch">
+              <input type="checkbox" id="chkGeolocation"><span class="slider">on off</span>
+            </label>
+            <p trans="sb_1t" class="item-settings">The device's IP address use to determine the country, city, and ZIP code,
+              determining its geographical location.</p>
+            <p></p>
+            <h4 trans="sb_2">
+              Imagery Caching
+            </h4>
+            <label class="switch item-switch">
+              <input type="checkbox" id="chkImageryCaching"><span class="slider">on off</span>
+            </label>
+            <p trans="sb_2t" class="item-settings">Component stores data so that future requests for that data can be served faster.
+              A cache hit occurs when the requested data can be found in a cache.</p>
+            <p></p>
+            <h4 trans="sb_3">
+              PWA Allowance
+            </h4>
+            <label class="switch item-switch">
+              <input type="checkbox" id="chkPWA"><span class="slider">on off</span>
+            </label>
+            <p trans="sb_3t" class="item-settings">A progressive web application is a type of application software delivered through the web.
+              The allowance allows to add icon of application to home screen and to run the application as native.</p>
+            <p></p>
+            <h4 trans="sb_4">
+              SRTM Elevation
+            </h4>
+            <label class="switch item-switch">
+              <input type="checkbox" id="chkCgiarElevation"><span class="slider">on off</span>
+            </label>
+            <p trans="sb_4t" class="item-settings">Use the CGIAR CSI SRTM DEM. The SRTM 90m digital elevation data, produced by NASA originally,
+              covering all of the countries of the world.</p>
+            <p></p>
+            <h4 trans="sb_5">
+              Standalone Application
+            </h4>
+            <label class="switch item-switch">
+              <input type="checkbox" id="chkStandalone"><span class="slider">on off</span>
+            </label>
+            <p trans="sb_5t" class="item-settings">This mode allows to run the application locally on the device and doesn't require anything else
+              to be functional. It's will allow you to view the globe without having an active connection to internet.
+              It turns on PWA and uses previously loaded SRTM elevation data and caching imagery.</p>
+            <p></p>
+          </div>
+          <div class="tab-pane fade" id="t-layers">
+            <div class="layers-list-contener">
+              <h4 trans="sl_1">
+                Imagery layers
+              </h4>
+              <select class="form-control-sm layers-select" multiple id="lstLayers">
+              </select>
+            </div>
+            <div class="layers-props-contener">
+              <h4 class="layers-props-header" trans="sl_2">
+                Layer properties
+              </h4>
+              <p></p>
+              <p class="item-settings layer-prop">
+                <span class="layer-prop-name" trans="sl_2e">Enabled&nbsp;</span>
+                <label class="switch">
+                  <input type="checkbox" id="chkLayerEnabled" disabled>
+                  <span class="slider slider-disabled">on off</span>
+                </label>
+                  </p>
+              <p class="item-settings layer-prop">
+                <span class="layer-prop-name" trans="sl_2v">Visible&nbsp; &nbsp;</span>
+                <label class="switch">
+                  <input type="checkbox" id="chkLayerVisible" disabled>
+                  <span class="slider slider-disabled">on off</span>
+                </label>
+              </p>
+              <p></p>
+              <h4 class="layers-props-header" trans="sl_3">
+                Layer details
+              </h4>
+              <p class="item-settings layer-tooltip" id="layerTooltip"></p>
+              <p class="item-settings layer-text" id="layerDetailsText"></p>
+              <p class="item-settings layer-link"><a id="layerLink" target="_blank"></a></p>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="t-cache">
+            <h4 trans="sc_1">
+              Total cache
+            </h4>
+            <div class="item-settings">
+              <p trans="sc_11">This is cache of all data.</p>
+              <p>
+                <span trans="sc_12">Total uses</span>
+                <b><label id="lblAllCacheUse"></label></b> <span trans="sc_13">Mb from</span>
+                <b><label id="lblAvalableSpace"></label></b> <span trans="sc_14">Mb avalable space</span>.
+              </p>
+              <p trans="sc_15">For remove all data you can open follow links.</p>
+              <p>Chrome: <a id="aSiteChromeUrl" target="_blank" title="Copy and paste to browser's address bar."></a></p>
+              <p>Edge: <a id="aSiteEdgeUrl" target="_blank" title="Copy and paste to browser's address bar."></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-contener">
+    <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal" id="btnSave" trans="b_1">Save</button>
+    <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal" id="btnCancel" trans="b_2">Cancel</button>
+    <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal" id="btnDefault" trans="b_3">Default</button>
+  </div>
+
+</body>
+</html>

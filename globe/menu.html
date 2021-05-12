@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>1Globe - Menu</title>
+  <link rel="shortcut icon" href="#">
+
+  <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/common.css" rel="stylesheet">
+  <link href="css/menu.css" rel="stylesheet">
+
+  <script src="libs/jquery/jquery-3.5.1.min.js"></script>
+  <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="scripts/menu.js"></script>
+  <script src="scripts/locale/ru/dictionaryRu.js"></script>
+
+  <script type="text/javascript">
+    function closeDialog(args) {
+      if (window != window.top) {
+        window.parent.closeDialog(args);
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="header-contener">
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true" trans="m_1">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" id="pills-settings-tab" data-toggle="pill" href="#pills-settings" role="tab" aria-controls="pills-profile" aria-selected="false" trans="m_2">Settings</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-about" role="tab" aria-controls="pills-about" aria-selected="false" trans="m_3">About</a>
+      </li>
+    </ul>
+  </div>
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+      <iframe src="home.html" frameborder="0"></iframe>
+    </div>
+    <div class="tab-pane fade show active" id="pills-settings" role="tabpanel" aria-labelledby="pills-settings-tab">
+      <iframe src="settings.html" frameborder="0"></iframe>
+    </div>
+    <div class="tab-pane fade" id="pills-about" role="tabpanel" aria-labelledby="pills-about-tab">
+      <iframe src="about.html" frameborder="0"></iframe>
+    </div>
+  </div>
+</body>
+</html>

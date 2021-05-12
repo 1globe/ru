@@ -1,0 +1,121 @@
+
+ul.ui-sortable {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.ui-sortable li {
+    margin: 0px 1px 2px 1px;
+    padding: 0.1em;
+    padding-left: 1.2em; 
+}
+.ui-sortable li span.ui-icon-arrowthick-2-n-s {
+    position: absolute;
+    margin-left: -1.4em;
+}
+/*
+.ui-sortable-handle {
+    cursor: move;
+}
+.ui-accordion-content-active {
+    cursor: default;
+}
+*/
+.ui-state-default,
+.ui-button.ui-state-disabled:active {
+    border: none;
+    background-color: rgba(10, 10, 10, 0.4);
+    color: white;
+}
+.ui-corner-all {
+    border-radius: 2px;
+}
+.ui-accordion .ui-accordion-header {
+    margin: 0;
+    padding: 2px 10px 2px 3px;
+    white-space: nowrap;
+}          
+.ui-accordion-header-active {
+    font-weight: normal;
+    color: white;
+}
+.ui-accordion .ui-accordion-content {
+    border: 1px solid rgb(10, 10, 10);
+    padding: 0px 2px 2px 0px;
+    background-color: transparent;
+    color: white;
+    overflow: hidden;
+}
+.ui-accordion-header-indicators {
+  width: 10px;
+  float: left;
+  overflow: hidden;
+}
+
+.ui-indicator {
+  margin: 1px;
+  width: 7px;
+  height: 7px;
+  float: top;
+  border: 1px solid rgb(150, 150, 50);
+  border-radius: 4px;
+}
+.ui-indicator-download-on {
+  background-color: rgba(154, 255, 154, 1.0);
+}
+.ui-indicator-cache-on {
+  background-color: rgba(255, 35, 35, 1.0);
+}
+
+.ui-accordion-header-icon {
+  width: 16px;
+  float: left;
+}
+.ui-accordion-header-text {
+  float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 2px 2px 0px 2px;
+  margin-left: 2px;
+  /* vertical-align: bottom; */
+  /*background: red;
+  border: 1px solid white;*/
+}
+.ui-accordion-header-checkbox {
+  text-align: right;
+}
+.ui-slider {
+    margin-top: 10px;
+}
+.layer-icon {
+  /*vertical-align: text-top;*/
+  width: 16px;
+}
+
+.ui-icon {
+  margin-right: 0px;
+}
+
+.select-property {
+  background-color: rgba(30, 30, 30, 1.0);
+  color: whitesmoke;
+  border: 1px solid rgb(100, 100, 100);
+  outline: none;
+  width: 100%;
+}
+.select-option-property {
+  color: rgb(200, 200, 200);
+  background-color: rgba(30, 30, 30, 1.0);
+}
+
+select.property-layer option[value="googleMap"]   { background-image:url(../images/layers/google-maps-16.png); }
+
+select.property-color option[value="#BDB76B"]   { background-color: #BDB76B; }
+select.property-color option[value="#6B8E23"]   { background-color: #6B8E23; }
+select.property-color option[value="#FFD700"]   { background-color: #FFD700; }
+select.property-color option[value="#FF0000"]   { background-color: #FF0000; }
+select.property-color option[value="#FFFF00"]   { background-color: #FFFF00; }
+select.property-color option[value="#008000"]   { background-color: #008000; }
+select.property-color option[value="#0000FF"]   { background-color: #0000FF; }
+select.property-color option[value="#FFFFFF"]   { background-color: #FFFFFF; }
+select.property-color option[value="#000000"]   { background-color: #000000; }

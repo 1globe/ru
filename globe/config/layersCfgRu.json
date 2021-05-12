@@ -1,0 +1,509 @@
+{
+  "imageryLayers": [
+    {
+      "key": "bingSat",
+      "name": "MsBing Спутник",
+      "icon": "images/layers/bing_logo-16.png",
+      "tooltip": "Изображение спутниковых снимков сервиса Bing Карты",
+      "text": "Картографический веб-сервис Bing Карты предлагает аэрофотоснимки и спутниковые снимки со всего мира. Покрытие варьируется в зависимости от региона, наиболее подробное покрытие - в США и Великобритании. Покрытие в разных областях внутри страны также сильно различается в зависимости от доступности изображений для этого региона. Bing Maps постоянно добавляет изображения в новые области и обновляет покрытие в областях существующего покрытия.",
+      "link": "https://www.bing.com/maps",
+      "provider": {
+        "fsDirName": "Bing_Satellite",
+        "fileExt": "jpg",
+        "tilingScheme": {
+          "type": "WebMercator",
+          "options": {
+            "numberOfLevelZeroTilesX": 2,
+            "numberOfLevelZeroTilesY": 2
+          }
+        },
+        "url": "https://ecn.{s}.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?n=z&g=9415",
+        "subdomains": ["t0", "t1", "t2", "t3"],
+        "customTags": { "quadkey": "tileXYToBingQuadKey" }
+      },
+      "visible": true,
+      "kind": "satmap"
+    },
+    {
+      "key": "googleSat",
+      "name": "Google Спутник",
+      "icon": "images/layers/google-maps-16.png",
+      "tooltip": "Изображение спутниковых снимков сервиса Google Карты",
+      "text": "Карты Google - это сервис бесплатных онлайн-карт от Google. Он доступен через веб-браузер или как приложение для мобильных устройств. Вы можете использовать Карты Google, чтобы найти информацию о маршрутах, местных компаниях и многое другое.",
+      "link": "https://google.com/maps",
+      "provider": {
+        "fsDirName": "Google_Satellite",
+        "fileExt": "png",
+        "url": "https://mt{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}",
+        "subdomains": [0, 1, 2, 3]
+      },
+      "visible": false,
+      "kind": "satmap"
+    },
+    {
+      "key": "yandexSat",
+      "name": "Yandex Спутник",
+      "icon": "images/layers/yandex_logo-16.png",
+      "tooltip": "Изображение спутниковых снимков сервиса Yandex Карты",
+      "text": "Яндекс Карты - российский картографический веб-сервис, разработанный Яндексом. Сервис предоставляет подробные карты всего мира. Включает в себя поиск, информацию о пробках, маршрутах и панорамах улиц. Яндекс.Карты - самый популярный картографический сервис в России.",
+      "link": "https://yandex.com/maps",
+      "provider": {
+        "fsDirName": "Yandex_Satellite",
+        "fileExt": "png",
+        "tilingScheme": {
+          "type": "EllipsoidMercator"
+        },
+        "url": "https://core-sat.maps.yandex.net/tiles?l=sat&x={x}&y={y}&z={z}"
+      },
+      "visible": false,
+      "kind": "satmap"
+    },
+    {
+      "enabled": false,
+      "key": "arcgisSatellite",
+      "name": "ArcGIS Спутник",
+      "icon": "images/layers/esri-icon-16.png",
+      "tooltip": "Изображение спутниковых снимков сервиса ArcGIS Online",
+      "text": "ArcGIS Online предоставляет спутниковые и аэрофотоснимки размером один метр или лучше во многих частях мира, а также спутниковые снимки с более низким разрешением по всему миру. Помимо коммерческих источников, карта содержит аэрофотоснимки высокого разрешения, предоставленные сообществом пользователей ГИС.",
+      "link": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+      "provider": {
+        "fsDirName": "ArcGIS_Satellite",
+        "fileExt": "jpg",
+        "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}/",
+        "maximumLevel": 9
+      },
+      "visible": false,
+      "kind": "satmap"
+    },
+    {
+      "key": "mapsforfreeRel",
+      "name": "M-F-F Рельеф",
+      "icon": "images/layers/maps-for-free.ico",
+      "tooltip": "Изображение физической карты мира Maps-for-Free",
+      "text": "Даннай версия Maps-For-Free предлагает бесплатные карты рельефа мира, которые можно легко интегрировать в существующие проекты карт.",
+      "link": "https://maps-for-free.com",
+      "provider": {
+        "fsDirName": "MapsForFree_Relief",
+        "fileExt": "jpg",
+        "proxy": "https://images.weserv.nl/?url=",
+        "url": "https://maps-for-free.com/layer/relief/z{z}/row{y}/{z}_{x}-{y}.jpg",
+        "maximumLevel": 11
+      },
+      "visible": false,
+      "kind": "satmap"
+    },
+    {
+      "enabled": true,
+      "key": "natgeoTerrain",
+      "name": "NatGeo Ландш.",
+      "icon": "images/layers/nat_geo_16.png",
+      "tooltip": "Изображение карты ландшафта National Geographic",
+      "text": "На данной карте  поверхность изображена в виде затененного рельефа. Эта карта используется в качестве слоя базовой карты для добавления штрихового рельефа к другим картам ГИС, таким как ArcGIS Online World Street Map. Это особенно полезно для карт, не содержащих ортоизображений. Затененные изображения рельефа были разработаны Esri с использованием данных GTOPO30, Shuttle Radar Topography Mission (SRTM - Радиолокационная топографическая миссия шаттла) и данных о высотах страны (NED), полученных от USGS.",
+      "link": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer",
+      "provider": {
+        "fsDirName": "NatGeo_Terrain",
+        "fileExt": "jpg",
+        "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}/",
+        "maximumLevel": 13
+      },
+      "visible": false,
+      "kind": "satmap"
+    },
+    {
+      "enabled": false,
+      "key": "arcgisTerrain",
+      "name": "ArcGIS Ландш.",
+      "icon": "images/layers/esri-icon-16.png",
+      "tooltip": "Изображение карты возвышенностей сервиса ArcGIS Online",
+      "text": "На даннлй карте возвышенности изображены в виде теней рельефа. Эта карта предназначена для использования в качестве фона для топографических, почвенных, гидродинамических, ландшафтных или других карт для отдыха на открытом воздухе. Карта была составлена из различных источников от нескольких поставщиков данных.",
+      "link": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer",
+      "provider": {
+        "fsDirName": "ArcGIS_Terrain",
+        "fileExt": "jpg",
+        "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}",
+        "maximumLevel": 9
+      },
+      "visible": false,
+      "kind": "satmap"
+    },
+    {
+      "key": "googleTerrain",
+      "name": "Google Ландш.",
+      "icon": "images/layers/google-maps-16.png",
+      "tooltip": "Изображение карты ландшафта сервиса Google Карты",
+      "text": "Карты Google - это сервис бесплатных онлайн-карт от Google. Он доступен через веб-браузер или как приложение для мобильных устройств. Вы можете использовать Карты Google, чтобы найти информацию о маршрутах, местных компаниях и многое другое.",
+      "link": "https://google.com/maps",
+      "provider": {
+        "fsDirName": "Google_Terrain",
+        "fileExt": "png",
+        "url": "https://mt{s}.google.com/vt/lyrs=p&hl=ru&x={x}&y={y}&z={z}&scale=2",
+        "subdomains": [0, 1, 2, 3]
+      },
+      "visible": false,
+      "kind": "satmap"
+    },
+    {
+      "enabled": false,
+      "key": "arcgisPhysicalMap",
+      "name": "ArcGIS Физич.",
+      "icon": "images/layers/esri-icon-16.png",
+      "tooltip": "Изображение физической карты сервиса ArcGIS Online",
+      "text": "На этой карте представлена физическая карта Земли из расчета 1.24 км на пиксель для мира и 500 м для Соединенных Штатов.",
+      "link": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer",
+      "provider": {
+        "fsDirName": "ArcGIS_PhysicalMap",
+        "fileExt": "jpg",
+        "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}/",
+        "maximumLevel": 8
+      },
+      "visible": false,
+      "kind": "satmap"
+    },
+    {
+      "key": "arcgisNatGeo",
+      "name": "ArcGIS NatGeo",
+      "icon": "images/layers/esri-icon-16.png",
+      "tooltip": "Изображение карты ArcGIS Online в стиле National Geographic",
+      "text": "Этот компонентный слой тайлов отображает экологические наземные единицы (ELU) и батиметрию, объединенные с разнонаправленной отмывкой и подводным рельефом в малых и средних масштабах. Он разработан для использования в качестве компонентного базового слоя на карте стилей National Geographic. Он не предназначен для автономного использования.",
+      "link": "https://tiles.arcgis.com/tiles/P3ePLMYs2RVChkJx/arcgis/rest/services/NatGeoStyleBase/MapServer",
+      "provider": {
+        "fsDirName": "ArcGIS_NatGeo",
+        "fileExt": "jpg",
+        "url": "https://tiles.arcgis.com/tiles/P3ePLMYs2RVChkJx/arcgis/rest/services/NatGeoStyleBase/MapServer/tile/{z}/{y}/{x}",
+        "maximumLevel": 9
+      },
+      "visible": false,
+      "kind": "satmap"
+    },
+    {
+      "key": "natgeoWorldMap",
+      "name": "NatGeo Мир",
+      "icon": "images/layers/nat_geo_16.png",
+      "tooltip": "Изображение карты мира National Geographic",
+      "text": "Данная карта предназначена для использования в качестве общей справочной карты в информационных и образовательных целях, а также в качестве базовой карты специалистами по ГИС и другими пользователями для создания веб-карт и веб-картографических приложений. Карта была разработана National Geographic и Esri и отражает характерный картографический стиль National Geographic на многомасштабной справочной карте мира.",
+      "link": "https://services.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer",
+      "provider": {
+        "fsDirName": "NatGeo_WorldMap",
+        "fileExt": "jpg",
+        "url": "https://services.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}/",
+        "maximumLevel": 16
+      },
+      "visible": false,
+      "kind": "satmap"
+    },
+    {
+      "key": "natgeoTopoMap",
+      "name": "NatGeo Топогр.",
+      "icon": "images/layers/nat_geo_16.png",
+      "tooltip": "Изображение топографической карты мира National Geographic",
+      "text": "Данная карта предназначена для использования профессионалами ГИС в качестве базовой карты. Карта включает административные границы, города, водные объекты, физико-географические объекты, парки, достопримечательности, шоссе, дороги, железные дороги и аэропорты, наложенные на земную поверхность, а также изображения рельефа с оттенками для дополнительного контекста. Эта базовая карта была составлена из множества наилучших доступных источников от нескольких поставщиков данных и сообщества пользователей ГИС.",
+      "link": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer",
+      "provider": {
+        "fsDirName": "NatGeo_TopoMap",
+        "fileExt": "jpg",
+        "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}/",
+        "maximumLevel": 13
+      },
+      "visible": false,
+      "kind": "satmap"
+    },
+    {
+      "key": "openTopoMap",
+      "name": "OpenTopoMap",
+      "icon": "images/layers/opentopomap-16.png",
+      "tooltip": "Изображение карты OpenTopoMap",
+      "text": "OpenTopoMap - это бесплатная топографическая карта, созданная на основе данных OpenStreetMap и данных высот SRTM. Стиль карты основан на официальных картах и ​​основан на хорошей читаемости за счет высокой контрастности и сбалансированных подписей.",
+      "link": "https://opentopomap.org",
+      "provider": {
+        "fsDirName": "OpenTopo_Map",
+        "fileExt": "png",
+        "url": "https://a.tile.opentopomap.org/{z}/{x}/{y}.png",
+        "maximumLevel_": 16
+      },
+      "visible": false,
+      "kind": "satmap"
+    },
+    {
+      "key": "osmMap",
+      "name": "OpenStreetMap",
+      "icon": "images/layers/osm-logo-16.png",
+      "tooltip": "Изображение карты OpenStreetMap",
+      "text": "OpenStreetMap - это совместный проект по созданию бесплатной редактируемой карты мира. Геоданные, лежащие в основе карты, считаются основным продуктом проекта. Создание и рост OSM были мотивированы ограничениями на использование или доступность картографических данных в большей части мира, а также появлением недорогих портативных устройств спутниковой навигации.",
+      "link": "https://www.openstreetmap.org",
+      "provider": {
+        "fsDirName": "Osm_Map",
+        "fileExt": "png",
+        "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        "subdomains": ["a", "b", "c"]
+      },
+      "visible": false,
+      "kind": "satmap"
+    },
+    {
+      "key": "bingMap",
+      "name": "MsBing Карты",
+      "icon": "images/layers/bing_logo-16.png",
+      "tooltip": "Изображение карты сервиса Bing Карты",
+      "text": "Картографический веб-сервис Bing Карты предлагает аэрофотоснимки и спутниковые снимки со всего мира. Покрытие варьируется в зависимости от региона, наиболее подробное покрытие - в США и Великобритании. Покрытие в разных областях внутри страны также сильно различается в зависимости от доступности изображений для этого региона. Bing Maps постоянно добавляет изображения в новые области и обновляет покрытие в областях существующего покрытия.",
+      "link": "https://www.bing.com/maps",
+      "provider": {
+        "fsDirName": "Bing_Map",
+        "tilingScheme": {
+          "type": "WebMercator",
+          "options": {
+            "numberOfLevelZeroTilesX": 2,
+            "numberOfLevelZeroTilesY": 2
+          }
+        },
+        "proxy": "https://images.weserv.nl/?url=",
+        "url": "https://ak.dynamic.{s}.tiles.virtualearth.net/comp/ch/{quadkey}?it=G,L&src=o&shading=hill&og=1226&n=z&mkt=ru",
+        "subdomains": ["t0", "t1", "t2", "t3"],
+        "customTags": { "quadkey": "tileXYToBingQuadKey" }
+      },
+      "visible": false,
+      "kind": "satmap"
+    },
+    {
+      "key": "googleMap",
+      "name": "Google Карты",
+      "icon": "images/layers/google-maps-16.png",
+      "tooltip": "Изображение карты сервиса Google Карты",
+      "text": "Карты Google - это сервис бесплатных онлайн-карт от Google. Он доступен через веб-браузер или как приложение для мобильных устройств. Вы можете использовать Карты Google, чтобы найти информацию о маршрутах, местных компаниях и многое другое.",
+      "link": "https://google.com/maps",
+      "provider": {
+        "fsDirName": "Google_Map",
+        "fileExt": "png",
+        "url": "https://mt{s}.google.com/vt/lyrs=m&hl=ru&x={x}&y={y}&z={z}",
+        "subdomains": [0, 1, 2, 3]
+      },
+      "visible": false,
+      "kind": "satmap"
+    },
+    {
+      "key": "yandexMap",
+      "name": "Yandex Карты",
+      "icon": "images/layers/yandex_logo-16.png",
+      "tooltip": "Изображение карты сервиса Yandex Карты",
+      "text": "Яндекс Карты - российский картографический веб-сервис, разработанный Яндексом. Сервис предоставляет подробные карты всего мира. Включает в себя поиск, информацию о пробках, маршрутах и панорамах улиц. Яндекс.Карты - самый популярный картографический сервис в России.",
+      "link": "https://yandex.com/maps",
+      "provider": {
+        "fsDirName": "Yandex_Map",
+        "fileExt": "png",
+        "tilingScheme": {
+          "type": "EllipsoidMercator"
+        },
+        "url": "https://vec{s}.maps.yandex.net/tiles?l=map&lang=ru_RU&x={x}&y={y}&z={z}&scale=2",
+        "subdomains": ["01", "02", "03", "04"]
+      },
+      "visible": false,
+      "kind": "satmap"
+    },
+    {
+      "enabled": true,
+      "key": "2gisMap",
+      "name": "2ГИС Карта",
+      "icon": "images/layers/2gis-16.png",
+      "tooltip": "Изображение карты сервиса 2ГИС",
+      "text": "2ГИС - российская поисковая компания, занимающаяся разработкой цифровых карт и путеводителей по городам России, Казахстана, Италии, Чехии, Чили, ОАЭ, Узбекистана, Киргизии, Кипра, Азербайджана и Украины.",
+      "link": "https://2gis.ru",
+      "provider": {
+        "fsDirName": "2Gis_Map",
+        "fileExt": "png",
+        "url": "https://tile2.maps.2gis.com/tiles?x={x}&y={y}&z={z}",
+        "subdomains": ["0", "1", "2", "3", "4"],
+        "minimumLevel": 2
+      },
+      "visible": false,
+      "kind": "satmap"
+    },
+    {
+      "key": "gswWater",
+      "name": "Global Вода",
+      "icon": "images/layers/water-16.png",
+      "tooltip": "Глобальная карта водной поверхности",
+      "text": "Глобальная карта водной поверхности показывает расположение и временное распределение водных поверхностей в глобальном масштабе за последние 3,7 десятилетия, а также предоставляет статистические данные об их масштабах и изменениях для поддержки принятия более информированных решений по управлению водными ресурсами.",
+      "link": "https://developers.google.com/earth-engine/datasets/catalog/JRC_GSW1_2_GlobalSurfaceWater",
+      "provider": {
+        "fsDirName": "Gsw_Water",
+        "fileExt": "png",
+        "url": "https://storage.googleapis.com/global-surface-water/tiles2019/occurrence/{z}/{x}/{y}.png",
+        "maximumLevel": 13
+      },
+      "visible": false,
+      "alpha": 0.6,
+      "kind": "water"
+    },
+    {
+      "enabled": false,
+      "key": "mapsforfreeWater",
+      "name": "M-F-Free Вода",
+      "icon": "images/layers/maps-for-free.ico",
+      "tooltip": "Карта рек и морей Maps-for-Free",
+      "text": "Maps-For-Free предлагает бесплатные карты рельефа всего мира и другие слои, которые можно легко интегрировать в существующие проекты карт.",
+      "link": "https://maps-for-free.com",
+      "provider": {
+        "fsDirName": "MapsForFree_Water",
+        "fileExt": "gif",
+        "proxy": "https://images.weserv.nl/?url=",
+        "url": "https://maps-for-free.com/layer/water/z{z}/row{y}/{z}_{x}-{y}.gif",
+        "maximumLevel": 11
+      },
+      "visible": false,
+      "alpha": 0.8,
+      "kind": "water"
+    },
+    {
+      "key": "bingSkl",
+      "name": "MsBing Дороги",
+      "icon": "images/layers/bing_logo-16.png",
+      "tooltip": "Изображение карты дорог сервиса Bing Карты",
+      "text": "Картографический веб-сервис Bing Карты предлагает аэрофотоснимки и спутниковые снимки со всего мира. Покрытие варьируется в зависимости от региона, наиболее подробное покрытие - в США и Великобритании. Покрытие в разных областях внутри страны также сильно различается в зависимости от доступности изображений для этого региона. Bing Maps постоянно добавляет изображения в новые области и обновляет покрытие в областях существующего покрытия.",
+      "link": "https://www.bing.com/maps",
+      "provider": {
+        "fsDirName": "Bing_Skl",
+        "tilingScheme": {
+          "type": "WebMercator",
+          "options": {
+            "numberOfLevelZeroTilesX": 2,
+            "numberOfLevelZeroTilesY": 2
+          }
+        },
+        "proxy": "https://images.weserv.nl/?url=",
+        "url": "http://ak.dynamic.{s}.tiles.virtualearth.net/comp/ch/{quadkey}?mkt=ru-RU&it=Z,L,LA&src=o&shading=hill&og=1226&n=z",
+        "subdomains": ["t0", "t1", "t2", "t3"],
+        "customTags": { "quadkey": "tileXYToBingQuadKey" }
+      },
+      "visible": false,
+      "alpha": 0.8,
+      "kind": "skl"
+    },
+    {
+      "key": "googleSkl",
+      "name": "Google Дороги",
+      "icon": "images/layers/google-maps-16.png",
+      "tooltip": "Изображение карты дорог сервиса Google Карты",
+      "text": "Карты Google - это сервис бесплатных онлайн-карт от Google. Он доступен через веб-браузер или как приложение для мобильных устройств. Вы можете использовать Карты Google, чтобы найти информацию о маршрутах, местных компаниях и многое другое.",
+      "link": "https://google.com/maps",
+      "provider": {
+        "fsDirName": "Google_Skl",
+        "fileExt": "png",
+        "url": "https://mt{s}.google.com/vt/lyrs=h&hl=ru&x={x}&y={y}&z={z}",
+        "subdomains": [0, 1, 2, 3]
+      },
+      "visible": false,
+      "alpha": 0.8,
+      "kind": "skl"
+    },
+    {
+      "key": "yandexSkl",
+      "name": "Yandex Дороги",
+      "icon": "images/layers/yandex_logo-16.png",
+      "tooltip": "Изображение карты дорог сервиса Yandex Карты",
+      "text": "Яндекс Карты - российский картографический веб-сервис, разработанный Яндексом. Сервис предоставляет подробные карты всего мира. Включает в себя поиск, информацию о пробках, маршрутах и панорамах улиц. Яндекс.Карты - самый популярный картографический сервис в России.",
+      "link": "https://yandex.com/maps",
+      "provider": {
+        "fsDirName": "Yandex_Skl",
+        "fileExt": "png",
+        "tilingScheme": {
+          "type": "EllipsoidMercator"
+        },
+        "url": "https://vec{s}.maps.yandex.net/tiles?l=skl&lang=ru_RU&x={x}&y={y}&z={z}&scale=2",
+        "subdomains": ["01", "02", "03", "04"]
+      },
+      "visible": true,
+      "alpha": 0.8,
+      "kind": "skl"
+    },
+    {
+      "enabled": false,
+      "key": "cacheCoverage",
+      "name": "Кэш Покрытие",
+      "icon": "images/layers/test-tube-5-16.png",
+      "tooltip": "Закэшированные участки изображений",
+      "text": "Карта отмечает закэшированные участки изображений для каждого слоя.",
+      "provider": {
+        "cacheLayerKey": "bingSat",
+        "levelOffsets": {
+          "bingSat": -1,
+          "bingMap": -1,
+          "bingSkl": -1
+        }
+      },
+      "properties": [
+        {
+          "text": "Слой:",
+          "name": "layer",
+          "type": "select",
+          "value": {
+            "type": "select-option"
+          }
+        },
+        {
+          "text": "Цвет:",
+          "name": "color",
+          "type": "select",
+          "value": {
+            "type": "select-option",
+            "values": [
+              { "value": "#BDB76B", "text": "DARKKHAKI" },
+              { "value": "#6B8E23", "text": "OLIVEDRAB" },
+              { "value": "#FFD700", "text": "GOLD" },
+              { "value": "#FF0000", "text": "RED" },
+              { "value": "#FFFF00", "text": "YELLOW" },
+              { "value": "#008000", "text": "GREEN" },
+              { "value": "#0000FF", "text": "BLUE" },
+              { "value": "#FFFFFF", "text": "WHITE" },
+              { "value": "#000000", "text": "BLACK" }              
+            ]
+          }
+        }
+      ],
+      "visible": false,
+      "alpha": 0.7,
+      "kind": "coverage"
+    },
+    {
+      "enabled": false,
+      "key": "cgiarCoverage",
+      "name": "Cgiar Покрытие",
+      "icon": "images/layers/test-tube-5-16.png",
+      "tooltip": "Загруженные данные высот CGIAR SRTM",
+      "text": "Карта отмечает участки загруженных данных высот CGIAR (Консультативная группа по международным сельскохозяйственным исследованиям) Srtm (Радиолокационная топографическая миссия шаттла).",
+      "properties": [
+        {
+          "text": "Цвет:",
+          "name": "color",
+          "type": "select",
+          "value": {
+            "type": "select-option",
+            "values": [
+              { "value": "#FFD700", "text": "GOLD" },
+              { "value": "#BDB76B", "text": "DARKKHAKI" },
+              { "value": "#6B8E23", "text": "OLIVEDRAB" },
+              { "value": "#FF0000", "text": "RED" },
+              { "value": "#FFFF00", "text": "YELLOW" },
+              { "value": "#008000", "text": "GREEN" },
+              { "value": "#0000FF", "text": "BLUE" },
+              { "value": "#FFFFFF", "text": "WHITE" },
+              { "value": "#000000", "text": "BLACK" }              
+            ]
+          }
+        }
+      ],
+      "visible": false,
+      "alpha": 0.7,
+      "kind": "coverage"
+    },
+    {
+      "enabled": false,
+      "key": "geoCoordinates",
+      "name": "Геокоординаты",
+      "icon": "images/layers/logo-16.png",
+      "tooltip": "Изображение географических координат",
+      "text": "This is geo coordinates grid.",
+      "visible": false,
+      "alpha": 0.8,
+      "kind": "coordinates"
+    }
+ ]
+}

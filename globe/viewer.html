@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#404040">
+  <meta http-equiv="cache-control" content="max-age=0" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+
+  <title>1Globe</title>
+
+  <link rel="shortcut icon" href="images/ico/favicon-16x16.png">
+  <link rel="manifest" href="manifest.json" />
+  <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="libs/jquery-ui-1.12.1/themes/base/jquery-ui.min.css" rel="stylesheet">
+  <link href="refs/engine/Widgets/widgets.css" rel="stylesheet">
+  <link href="css/common.css" rel="stylesheet">
+  <link href="css/viewer.css" rel="stylesheet">
+  <link href="css/layers.css" rel="stylesheet">
+
+  <script src="libs/jquery/jquery-3.5.1.min.js"></script>
+  <script src="libs/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+  <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+  <script src="libs/jszip/jszip.min.js"></script>
+  <script src="libs/geotiff.js/geotiff.js" async></script>
+
+  <script src="scripts/main.js"></script>
+  <script src="scripts/locale/ru/dictionaryRu.js"></script>
+</head>
+<body>
+  <div id="loadingIndicator" class="loading-indicator"></div>
+
+  <div id="topPanel" class="panel-top">
+    <img id="imgLogo" class="logo" src="images/ico/favicon-32x32.png"/>
+    <span id="textLogo" class="logo-text"></span>
+    <span id="textLogo2" class="logo-text2"></span>
+  </div>
+
+  <div id="statusPanel" class="panel-status">
+    <span id="spnCopyright"></span>
+  </div>
+
+  <div class="panel panel-search" id="searchPanel">
+    <button class="panel-search-btn" id="btnHome" title="Go to current location" trans_title="s_home">
+      <img class="panel-search-img" src="images/search/home-icon-24.png"/>
+    </button>
+    <button class="panel-search-btn" id="btnShowSearchPanel" title="Expand search panel" trans_title="s_show">
+      <img class="panel-search-img" src="images/search/chevronflat-r-24.png"/>
+    </button>
+    <button class="panel-search-btn" id="btnHideSearchPanel" title="Collapse search panel" trans_title="s_hide">
+      <img class="panel-search-img" src="images/search/chevronflat-l-24.png"/>
+    </button>
+    <input type="text" id="search" class="search-text" title="Enter search text and select service button" trans_title="s_text">
+    <button class="panel-search-btn" id="btnSearchBing" title="Bing Maps service" trans_title="s_bing">
+      <img class="panel-search-img" src="images/search/bing-map-search-24.png"/>
+    </button>
+    <button class="panel-search-btn" id="btnSearchYandex" title="Yandex service" trans_title="s_yndx">
+      <img class="panel-search-img" src="images/search/yandex-map-search-24.png"/>
+    </button>
+    <button class="panel-search-btn" id="btnSearchOsm" title="OpenStreetMap service" trans_title="s_osm">
+      <img class="panel-search-img" src="images/search/osm-search-24.png"/>
+    </button>
+  </div>
+
+  <div class="panel panel-settings" id="settingsPanel">
+    <span id="spnVersion"></span>
+    <button class="panel-settings-btn" id="btnSettigs" title="Settigs" data-toggle="modal">
+      <img class="panel-settings-img" src="images/settings/settings-24.png"/>
+    </button>
+  </div>
+  <div class="modal fade" id="modalDialog" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content dialog">
+        <div class="modal-header">
+          <span class="header-title">1Globe</span>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <iframe src="menu.html" frameborder="0" id="dialogIframe"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel-layers-contener">
+    <div class="panel panel-layers" style="display: none;">
+      <span style="margin: 3px; display: none;">Layers</span>
+      <ul class="ui-sortable" id="layers_contener">
+        <template id="layertemplate">
+          <li class="ui-state-default" layerKey="${item.key}" title="${item.tooltip}"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+            <div class="ui-accordion">
+              <div class="ui-accordion-header">
+                <div class="ui-accordion-header-indicators">
+                  <div class="ui-indicator ui-indicator-download-off" title="download"></div>
+                  <div class="ui-indicator ui-indicator-download-on" title="download" style="display: none;"></div>
+                  <div class="ui-indicator ui-indicator-cache-off" title="cache"></div>
+                  <div class="ui-indicator ui-indicator-cache-on" title="cache" style="display: none;"></div>
+                </div>
+                <div class="ui-accordion-header-icon">
+                  <img class="layer-icon" src="${item.icon}">
+                </div>
+                <div class="ui-accordion-header-text">
+                  ${item.name}
+                </div>
+                <div class="ui-accordion-header-checkbox">
+                  <input type="checkbox" id="chkLayerVisMin-x" kind="${item.kind}">
+                </div>
+              </div>
+              <div>
+                <label for="chkLayerVisible-x"><input type="checkbox" id="chkLayerVisible-x"> <span trans="l_v">Visible</span></label>
+                <input type="range" id="slider_layer_alpha-x" min="0" max="1" step="0.1" value="1.0">
+                <div>#PROPERTIES</div>
+              </div>
+            </div>
+          </li>
+        </template>
+        <template id="layerPropertyTemplate-select">
+          ${property.text}<select id="prop_${property.name}_select-x" class="select-property property-${property.name}" property="${property.name}">#PROPERTY_VALUES</select>
+        </template>
+        <template id="layerPropertyTemplate-select-option">
+          <option class="select-option-property" value="${property_value.value}">${property_value.text}</option>
+        </template>
+      </ul>
+    </div>
+  </div>
+
+  <div id="globeContainer" class="fullcontainer" style="display: none;"></div>
+
+  <div id="msgPanel" class="panel panel-wait" style="display: none;"></div>
+
+  <div id="informerPanel" class="panel panel-informer" style="display: none;">
+    <div id="informerContainer" class="informer-container">
+      <div id="infoTemplate" class="info-template" style="display: none;">
+        <div class="info-text" style="visibility: hidden;">&nbsp;</div>
+        <div class="info-progress">
+          <div class="info-bar info-download" title="download" trans_title="i_d" style="width: 0%; visibility: hidden;"></div>
+          <div class="info-bar info-unpack" title="unpack" trans_title="i_u" style="width: 0%; visibility: hidden;"></div>
+          <div class="info-bar info-parse" title="parse" trans_title="i_p" style="width: 0%; visibility: hidden;"></div>
+          <div class="info-bar info-create" title="create model" trans_title="i_c" style="width: 0%; visibility: hidden;"></div>
+        </div>            
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
