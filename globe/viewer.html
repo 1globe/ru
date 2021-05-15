@@ -11,8 +11,8 @@
 
   <title>1Globe</title>
 
-  <link rel="shortcut icon" href="images/ico/favicon-16x16.png">
-  <link rel="manifest" href="manifest.json" />
+  <link href="images/ico/favicon-16x16.png" rel="shortcut icon">
+  <link href="manifest.json" crossorigin="use-credentials" rel="manifest"/>
   <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="libs/jquery-ui-1.12.1/themes/base/jquery-ui.min.css" rel="stylesheet">
   <link href="refs/engine/Widgets/widgets.css" rel="stylesheet">
@@ -26,7 +26,7 @@
   <script src="libs/jszip/jszip.min.js"></script>
   <script src="libs/geotiff.js/geotiff.js" async></script>
 
-  <script src="scripts/main.js?v=0.1.1"></script>
+  <script src="scripts/main.js?v=0.1.2"></script>
   <script src="scripts/locale/ru/dictionaryRu.js"></script>
 </head>
 <body>
@@ -144,6 +144,15 @@
         </div>            
       </div>
     </div>
+  </div>
+
+  <div id="navigatorPanel" class="panel-navigator">
+    <button title="Forward" class="nav-button zoom-in" trans_title="n_f">
+      <div class="zoom-icon"></div>
+    </button>
+    <button title="Backward" class="nav-button zoom-out" trans_title="n_b">
+      <div class="zoom-icon"></div>
+    </button>
   </div>
 
 </body>

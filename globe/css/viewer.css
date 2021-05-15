@@ -1,3 +1,5 @@
+
+
 .theme_color {
   background-color: rgb(31, 71, 150);
 }
@@ -274,3 +276,91 @@ input[type="button"] {
 .info-create {
   background-color: #f3f035;
 }
+
+
+.panel-navigator {
+  position: absolute;
+  right: 40px;
+  bottom: 130px;
+  z-index: 10;
+  opacity: 0.8;
+  /* box-shadow: 0px 1px 4px rgb(0 0 0 / 30%); */
+}
+
+.nav-button.zoom-in {
+  top: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.nav-button.zoom-out {
+  top: 30px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+.nav-button.zoom-in .zoom-icon {
+  background-position: -90px 0;
+}
+.nav-button.zoom-out .zoom-icon {
+  background-position: -90px -15px;
+}
+
+.nav-button.zoom-in:hover {
+  border: 1px solid rgb(100, 100, 100);
+  background-color: rgba(60, 60, 60, 0.9);
+}
+.nav-button.zoom-out:hover {
+  border: 1px solid rgb(100, 100, 100);
+  background-color: rgba(60, 60, 60, 0.9);
+}
+.nav-button.zoom-in:hover .zoom-icon {
+  background-position: -105px 0;
+}
+.nav-button.zoom-out:hover .zoom-icon {
+  background-position: -105px -15px;
+}
+
+.nav-button .zoom-icon {
+  position: absolute;
+  top: 7px;
+  width: 15px;
+  height: 15px;
+  left: 7px;
+  background: transparent url(../images/navigator/icon-sprite-1x.png) 0 0 no-repeat;
+  background-size: 120px 30px;
+}
+.nav-button.zoom-out .zoom-icon {
+  top: 6px;
+}
+
+.nav-button {
+  position: absolute;
+  height: 29px;
+  left: 0px;
+  width: 30px;
+  border: 1px solid rgb(80, 80, 80);
+  border-radius: 8px;
+  background-color: rgba(50, 50, 50, 0.9);
+  cursor: pointer;
+  overflow: hidden;
+  /* transition: background-color 0.16s ease-out; */
+}
+
+
+
+/*
+a, button, h1, h2, h3, h4, h5, h6, input, ol, p, textarea, th, ul {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  font: inherit;
+  list-style: none;
+  margin: 0;
+  outline: 0;
+  outline-color: initial;
+  outline-style: initial;
+  outline-width: 0px;
+  overflow: visible;
+  padding: 0;
+  vertical-align: baseline;
+}
+*/
