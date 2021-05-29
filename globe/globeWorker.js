@@ -1,5 +1,6 @@
-const version = "0.1.0";
-const storageCacheName = 'globe_' + version;
+self.importScripts('scripts/version.js');
+
+const storageCacheName = 'globe_' + GlobeVersion;
 const expiredCache = 0;
 const offlineRequestPause = 1;
 

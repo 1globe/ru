@@ -7,6 +7,10 @@
   background-color: #132a44;
 }
 
+input[type="button"] {
+  outline: none;
+}
+
 .fullcontainer {
   height: 100%;
   width: 100%;
@@ -45,6 +49,7 @@
   border: none;
   opacity: 0.9;
 }
+
 .logo {
   vertical-align: -5px;
   cursor: pointer;
@@ -57,21 +62,11 @@
 }
 .logo-text2 {
   margin-left: 6px;
-  font-size: 1.2em;
+  font-size: 1.8em;
   vertical-align: baseline;
   text-shadow: 1px 1px 2px black, 0 0 1em #202020;
 }
 
-.panel-status {
-  position: absolute;
-  right: 1px;
-  bottom: 1px;
-  z-index: 10;
-  opacity: 0.8;
-  font-size: 0.9em;
-  color: lightgray;
-  text-shadow: 1px 1px 2px black, 0 0 1em #202020;
-}
 
 .cesium-performanceDisplay {
   width: 120px;
@@ -84,6 +79,7 @@
   color: #f52;
   display: none_;
 }
+
 .panel-wait {
   position: absolute;
   left: 50%;
@@ -94,29 +90,13 @@
   border: 1px solid rgb(100, 100, 100);
 }
 
-.loading-indicator {
-  width: 100px;
-  height: 100px;
-  margin-top: -50px;
-  margin-left: -50px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 10;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../images/common/loading.gif");
-}
-
 .panel-settings {
   position: absolute;
   top: 10px;
   right: 10px;
-  width: 100px;
   min-height: 0px;
   z-index: 20;
-  padding: 0px;
+  padding: 2px;
   font-size: medium;
   text-align: right;
   overflow: hidden;
@@ -130,11 +110,15 @@
   height: 26px;
   vertical-align: middle;
   text-align-last: right;
-  border: 1px solid rgb(80, 80, 80);
+  /* border: 1px solid rgb(80, 80, 80); */
+  border: none;
   outline: none;
 }
 .panel-settings-img {
   vertical-align: middle;
+  margin-top: -1px;
+  border: none;
+  border-style: none;
   outline: none;
   cursor: pointer;
 }
@@ -145,7 +129,7 @@ button.panel-settings-btn {
 .dialog {
   position: absolute;
   left: -100px;
-  width: 800px;
+  width: 760px;
   height: 70vh;
   background-color: rgba(20, 20, 20, 0.7);
   border: 1px solid rgb(50, 50, 50);
@@ -194,9 +178,27 @@ button.panel-settings-btn {
   border: 1px solid rgb(80, 80, 80);
   background-color: rgb(40, 40, 40);
 }
+.ui-autocomplete {
+  color: whitesmoke;
+  background-color: rgb(40, 40, 40);
+}
+.ui-autocomplete.ui-widget.ui-widget-content {
+  border: 1px solid rgb(80, 80, 80);
+}
 
-input[type="button"] {
-  outline: none;
+.loading-indicator {
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  margin-left: -50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/common/loading.gif");
 }
 
 .panel-layers-contener {
@@ -204,7 +206,7 @@ input[type="button"] {
   position: absolute;
   top: 90px;
   left: 10px;
-  height: calc(100% - 70px);
+  height: calc(100% - 100px);
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -213,6 +215,17 @@ input[type="button"] {
   width: 180px;
   min-height: 20px;
   padding: 0px;
+}
+
+.panel-status {
+  position: absolute;
+  right: 1px;
+  bottom: 1px;
+  z-index: 10;
+  opacity: 0.8;
+  font-size: 0.8em;
+  color: lightgray;
+  text-shadow: 1px 1px 2px black, 0 0 1em #202020;
 }
 
 .panel-informer {
@@ -277,6 +290,28 @@ input[type="button"] {
   background-color: #f3f035;
 }
 
+.panel-info {
+  position: absolute;
+  right: 60px;
+  bottom: 40px;
+  z-index: 10;
+  padding: 0px;
+  margin: 0px;
+  vertical-align: bottom;
+  color: whitesmoke;
+}
+.info-camera-pos {
+  padding: 0px 2px 0px 2px;
+}
+.info-camera-coord {
+  cursor: pointer;
+  padding: 0px 2px 0px 2px;
+}
+.info-camera-coord:hover {
+  color: white;
+  cursor: pointer;
+  background-color: rgb(50, 50, 50);
+}
 
 .panel-navigator {
   position: absolute;
@@ -322,9 +357,9 @@ input[type="button"] {
 .nav-button .zoom-icon {
   position: absolute;
   top: 7px;
+  left: 7px;
   width: 15px;
   height: 15px;
-  left: 7px;
   background: transparent url(../images/navigator/icon-sprite-1x.png) 0 0 no-repeat;
   background-size: 120px 30px;
 }
@@ -334,8 +369,8 @@ input[type="button"] {
 
 .nav-button {
   position: absolute;
-  height: 29px;
   left: 0px;
+  height: 29px;
   width: 30px;
   border: 1px solid rgb(80, 80, 80);
   border-radius: 8px;
@@ -345,6 +380,25 @@ input[type="button"] {
   /* transition: background-color 0.16s ease-out; */
 }
 
+.nav-button.nav-3d {
+  top: 61px;
+  font-weight: 500;
+  color: whitesmoke;
+  align-content: center;
+  vertical-align: middle;
+}
+.nav-button.nav-3d:hover {
+  color: white;
+  border: 1px solid rgb(100, 100, 100);
+  background-color: rgba(60, 60, 60, 0.9);
+}
+.nav-3d-icon {
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  width: 15px;
+  height: 15px;
+}
 
 
 /*

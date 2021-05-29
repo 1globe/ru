@@ -8,7 +8,7 @@
     ]
   },
   "config": {
-    "imageryLayersConfigUrl": "config/layersCfgRu.json",
+    "imageryLayersConfigUrl": "config/layersCfg_Ru.json",
     "settingsUrl": "config/settings.json"
   },
   "geocoder": {

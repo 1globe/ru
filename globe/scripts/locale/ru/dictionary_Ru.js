@@ -1,8 +1,8 @@
 const LocaleDictionary = {
-  Title: "1Globe глобус",
+  Title: "1Globe Земля",
   Caption: {
     Major: "1Globe",
-    Minor: "- модель планеты Земля"
+    Minor: "Земля"
   },
   Copyright: {
     Text: '© ООО "ГК 1Globe" 2020-2021, Студия ГК РнД.',
@@ -10,6 +10,10 @@ const LocaleDictionary = {
   },
   Messages: {
     WaitTest: "Пожалуйста, подождите..."
+  },
+  Units: {
+    Metre: "м",
+    Kilometre: "км"
   },
   Menu: {
     Keys: {
@@ -33,7 +37,8 @@ const LocaleDictionary = {
       i_c:    "создание модели",
       l_v:    "Видимость",
       n_f:    "Вперед",
-      n_b:    "Назад"
+      n_b:    "Назад",
+      i_cc:   "Скопировать координаты"
     }
   },
   Settings: {

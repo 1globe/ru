@@ -44,6 +44,10 @@ p {
   color: lightgray;
 }
 
+.version {
+  float: right;
+}
+
 /*
 .header-contener {
   min-height: 34px;
