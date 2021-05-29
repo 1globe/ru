@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>1Globe</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="DESCRIPTION">
+    <link rel="canonical" href="https://1globe.github.io/site//">
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle" style="display: none;"></i>
+                    <!--<i><img class="ico" src="img/favicon-16.png"></i> -->1Globe <span class="light">Земля</span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    
+                    <li>
+                      <a class="page-scroll" href="#features">Возможности</a>
+                    </li>
+                    
+                    <li>
+                      <a class="page-scroll" href="#layers">Слои</a>
+                    </li>
+                    
+                    <li>
+                      <a class="page-scroll" href="#contact">Контакты</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+
+
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <h1 class="brand-heading">1Globe</h1>
+                        <h3 class="intro-text">Самый многослойный глобус в мире.</h3>
+                        <br>
+                        <p class="intro-text">Изображения Земли отображаются на цифровом глобусе, который отображает поверхность планеты с использованием изображений разных слоев из разных сервисов. После достаточно большого увеличения, изображение переходит в другое изображение одной и той же области с более мелкими деталями.</p>
+                        <br>
+                        <a id="btnLaunch" href="../globe" target="_blank" class="btn btn-default btn-lg">Запустить глобус</a>
+                        <br>
+                        <!--
+                        <p class="intro-text" style="font-size: medium;">Everything you love about Earth, plus new layers for you to explore. Zoom in and see what adventures await you.</p>
+                        -->
+                        <P>&nbsp;</P>
+                        <P>&nbsp;</P>
+                        <a id="btnScroll" href="#features" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                      </div>
+                  </div>
+                </div>
+                <div class="row">
+                </div>
+          </div>
+    </header>
+    <diV class="intro-footer">&nbsp;</diV>
+
+    
+
+    <!-- Features Section -->
+    <section id="features" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 page">
+              <h2>Возможности</h2>
+              
+              <h3>Основные</h3>
+                
+                  <p>1Globe - это трехмерная (3D) программная модель представления Земли, которая дает пользователю возможность свободно перемещаться в виртуальной среде, изменяя угол обзора и положение.</p>
+                
+                  <p>Геобраузер 1Globe - это бесплатный виртуальный глобус для Веб. Геобраузер предоставляет удобный интерфейс для взаимодействия с картами, изображениями и геопространственными данными в контексте трехмерного глобуса.</p>
+                
+              
+              <h3>Слои</h3>
+                
+                  <p>Виртуальный глобус имеет возможность представлять множество различных слоёв на поверхности Земли. Вы можете изменять порядок, видимость и прозрачность для каждого слоя.</p>
+                
+              
+              <h3>Высоты</h3>
+                
+                  <p>1Globe Terrain Engine объединяет несколько источников данных в единый набор, оптимизированный для визуализации трехмерных карт.</p>
+                
+                  <p>Также, отдельно, используется CGIAR CSI SRTM ЦМР (цифровая модель рельефа). Цифровые данные о высоте разрешением 90 м, первоначально произведенные НАСА, охватывают все страны мира.</p>
+                
+              
+              <h3>Кэширование</h3>
+                
+                  <p>Компонент кэширования хранит данные, чтобы будущие запросы на эти данные могли обрабатываться быстрее. Обращение в кэш происходит, когда запрошенные данные могут быть найдены в кэше.</p>
+                
+              
+              <h3>Автономность</h3>
+                
+                  <p>Геобраузер 1Globe использует технологию PWA. Прогрессивное веб-приложение (PWA) - это тип прикладного программного обеспечения, поставляемого через Интернет.</p>
+                
+                  <p>Этот режим позволяет запускать приложение локально на устройстве и не требует, чтобы что-либо еще работало. Это позволит Вам просматривать земной шар без активного подключения к интернету. Используются ранее загруженные данные высот CGIAR CSI SRTM и кэшированные изображения.</p>
+                
+              
+              <h3>Геолокация</h3>
+                
+                  <p>IP-адрес устройства используется для определения страны, города и почтового индекса, определяя его географическое положение.</p>
+                
+              
+              <h3>Поиск</h3>
+                
+                  <p>Поиск позволяет искать местоположение по текстовому имени, описанию, адресу или географическим координатам.</p>
+                
+                  <p>Приложение испольет такие службы как Bing Maps Locations, Nominatim (данные OpenStreetMap) и сервис Яндекс.Поиск. Сервисы поддерживают структурированные поисковые запросы и запросы произвольной формы.</p>
+                
+              
+              <h3>Панели</h3>
+                
+                  <p>Слои: переключает отображение списка слоев, в котором вы управляете содержимым, отображаемым на глобусе.</p>
+                
+                  <p>Настройки: открывает диалог настроек, в котором вы настраиваете геобраузер.</p>
+                
+                  <p>Инфопанель: информационная панель, отображающая данные о текущем положении на земном шаре.</p>
+                
+              
+            </div>
+        </div>
+    </section>
+    
+
+
+    <!-- Layers Section -->
+    <section id="layers" class="container content-section text-center">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 page">
+            
+            <h2>Слои</h2>
+            
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/bingSat.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">MsBing Спутник<a class="layer-link" href='https://www.bing.com/maps' target="_blank"><img src='../globe/images/layers/bing_logo-16.png'></a></p>
+                <p class="layer-text">Картографический веб-сервис Bing Карты предлагает аэрофотоснимки и спутниковые снимки со всего мира. Покрытие варьируется в зависимости от региона, наиболее подробное покрытие - в США и Великобритании. Bing Maps постоянно добавляет изображения в новые области и обновляет покрытие в областях существующего покрытия.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/googleSat.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">Google Спутник<a class="layer-link" href='https://google.com/maps' target="_blank"><img src='../globe/images/layers/google-maps-16.png'></a></p>
+                <p class="layer-text">Карты Google - это сервис бесплатных онлайн-карт от Google. Он доступен через веб-браузер или как приложение для мобильных устройств. Вы можете использовать Карты Google, чтобы найти информацию о маршрутах, местных компаниях и многое другое.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/yandexSat.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">Yandex Спутник<a class="layer-link" href='https://yandex.com/maps' target="_blank"><img src='../globe/images/layers/yandex_logo-16.png'></a></p>
+                <p class="layer-text">Яндекс Карты - российский картографический веб-сервис, разработанный Яндексом. Сервис предоставляет подробные карты всего мира. Включает в себя поиск, информацию о пробках, маршрутах и панорамах улиц. Яндекс.Карты - самый популярный картографический сервис в России.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/arcgisSatellite.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">ArcGIS Спутник<a class="layer-link" href='https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer' target="_blank"><img src='../globe/images/layers/esri-icon-16.png'></a></p>
+                <p class="layer-text">ArcGIS Online предоставляет спутниковые и аэрофотоснимки размером один метр или лучше во многих частях мира, а также спутниковые снимки с более низким разрешением по всему миру. Помимо коммерческих источников, карта содержит аэрофотоснимки высокого разрешения, предоставленные сообществом пользователей ГИС.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/mapsforfreeRel.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">M-F-F Рельеф<a class="layer-link" href='https://maps-for-free.com' target="_blank"><img src='../globe/images/layers/maps-for-free.ico'></a></p>
+                <p class="layer-text">Даннай версия Maps-For-Free предлагает бесплатные карты рельефа мира, которые можно легко интегрировать в существующие проекты карт.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/natgeoTerrain.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">NatGeo Ландш.<a class="layer-link" href='https://services.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer' target="_blank"><img src='../globe/images/layers/nat_geo_16.png'></a></p>
+                <p class="layer-text">На данной карте  поверхность изображена в виде затененного рельефа. Эта карта используется в качестве слоя базовой карты для добавления штрихового рельефа к другим картам ГИС, таким как ArcGIS Online World Street Map. Это особенно полезно для карт, не содержащих ортоизображений. Затененные изображения рельефа были разработаны Esri с использованием данных GTOPO30, Shuttle Radar Topography Mission (SRTM - Радиолокационная топографическая миссия шаттла) и данных о высотах страны (NED), полученных от USGS.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/arcgisTerrain.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">ArcGIS Ландш.<a class="layer-link" href='https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer' target="_blank"><img src='../globe/images/layers/esri-icon-16.png'></a></p>
+                <p class="layer-text">На данной карте возвышенности изображены в виде теней рельефа. Эта карта предназначена для использования в качестве фона для топографических, почвенных, гидродинамических, ландшафтных или других карт для отдыха на открытом воздухе. Карта была составлена из различных источников от нескольких поставщиков данных.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/googleTerrain.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">Google Ландш.<a class="layer-link" href='https://google.com/maps' target="_blank"><img src='../globe/images/layers/google-maps-16.png'></a></p>
+                <p class="layer-text">Карты Google - это сервис бесплатных онлайн-карт от Google. Он доступен через веб-браузер или как приложение для мобильных устройств. Вы можете использовать Карты Google, чтобы найти информацию о маршрутах, местных компаниях и многое другое.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/arcgisPhysicalMap.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">ArcGIS Физич.<a class="layer-link" href='https://services.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer' target="_blank"><img src='../globe/images/layers/esri-icon-16.png'></a></p>
+                <p class="layer-text">На этой карте представлена физическая карта Земли из расчета 1.24 км на пиксель для мира и 500 м для Соединенных Штатов.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/arcgisNatGeo.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">ArcGIS NatGeo<a class="layer-link" href='https://tiles.arcgis.com/tiles/P3ePLMYs2RVChkJx/arcgis/rest/services/NatGeoStyleBase/MapServer' target="_blank"><img src='../globe/images/layers/esri-icon-16.png'></a></p>
+                <p class="layer-text">Этот компонентный слой отображает экологические наземные единицы (ELU) и батиметрию, объединенные с разнонаправленной отмывкой и подводным рельефом в малых и средних масштабах. Он разработан для использования в качестве компонентного базового слоя на карте стилей National Geographic. Он не предназначен для автономного использования.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/natgeoWorldMap.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">NatGeo Мир<a class="layer-link" href='https://services.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer' target="_blank"><img src='../globe/images/layers/nat_geo_16.png'></a></p>
+                <p class="layer-text">Данная карта предназначена для использования в качестве общей справочной карты в информационных и образовательных целях, а также в качестве базовой карты специалистами по ГИС и другими пользователями для создания веб-карт и веб-картографических приложений. Карта была разработана National Geographic и Esri и отражает характерный картографический стиль National Geographic на многомасштабной справочной карте мира.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/natgeoTopoMap.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">NatGeo Топогр.<a class="layer-link" href='https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer' target="_blank"><img src='../globe/images/layers/nat_geo_16.png'></a></p>
+                <p class="layer-text">Данная карта предназначена для использования профессионалами ГИС в качестве базовой карты. Карта включает административные границы, города, водные объекты, физико-географические объекты, парки, достопримечательности, шоссе, дороги, железные дороги и аэропорты, наложенные на земную поверхность, а также изображения рельефа с оттенками для дополнительного контекста. Эта базовая карта была составлена из множества наилучших доступных источников от нескольких поставщиков данных и сообщества пользователей ГИС.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/openTopoMap.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">OpenTopoMap<a class="layer-link" href='https://opentopomap.org' target="_blank"><img src='../globe/images/layers/opentopomap-16.png'></a></p>
+                <p class="layer-text">OpenTopoMap - это бесплатная топографическая карта, созданная на основе данных OpenStreetMap и данных высот SRTM. Стиль карты основан на официальных картах и ​​основан на хорошей читаемости за счет высокой контрастности и сбалансированных подписей.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/osmMap.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">OpenStreetMap<a class="layer-link" href='https://www.openstreetmap.org' target="_blank"><img src='../globe/images/layers/osm-logo-16.png'></a></p>
+                <p class="layer-text">OpenStreetMap - это совместный проект по созданию бесплатной редактируемой карты мира. Геоданные, лежащие в основе карты, считаются основным продуктом проекта. Создание и рост OSM были мотивированы ограничениями на использование или доступность картографических данных в большей части мира, а также появлением недорогих портативных устройств спутниковой навигации.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/bingMap.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">MsBing Карты<a class="layer-link" href='https://www.bing.com/maps' target="_blank"><img src='../globe/images/layers/bing_logo-16.png'></a></p>
+                <p class="layer-text">Картографический веб-сервис Bing Карты предлагает аэрофотоснимки и спутниковые снимки со всего мира. Покрытие варьируется в зависимости от региона, наиболее подробное покрытие - в США и Великобритании. Bing Maps постоянно добавляет изображения в новые области и обновляет покрытие в областях существующего покрытия.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/googleMap.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">Google Карты<a class="layer-link" href='https://google.com/maps' target="_blank"><img src='../globe/images/layers/google-maps-16.png'></a></p>
+                <p class="layer-text">Карты Google - это сервис бесплатных онлайн-карт от Google. Он доступен через веб-браузер или как приложение для мобильных устройств. Вы можете использовать Карты Google, чтобы найти информацию о маршрутах, местных компаниях и многое другое.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/yandexMap.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">Yandex Карты<a class="layer-link" href='https://yandex.com/maps' target="_blank"><img src='../globe/images/layers/yandex_logo-16.png'></a></p>
+                <p class="layer-text">Яндекс Карты - российский картографический веб-сервис, разработанный Яндексом. Сервис предоставляет подробные карты всего мира. Включает в себя поиск, информацию о пробках, маршрутах и панорамах улиц. Яндекс.Карты - самый популярный картографический сервис в России.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/2gisMap.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">2ГИС Карта<a class="layer-link" href='https://2gis.ru' target="_blank"><img src='../globe/images/layers/2gis-16.png'></a></p>
+                <p class="layer-text">2ГИС - российская поисковая компания, занимающаяся разработкой цифровых карт и путеводителей по городам России, Казахстана, Италии, Чехии, Чили, ОАЭ, Узбекистана, Киргизии, Кипра, Азербайджана и Украины.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/gswWater.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">Global Вода<a class="layer-link" href='https://developers.google.com/earth-engine/datasets/catalog/JRC_GSW1_2_GlobalSurfaceWater' target="_blank"><img src='../globe/images/layers/water-16.png'></a></p>
+                <p class="layer-text">Глобальная карта водной поверхности показывает расположение и временное распределение водных поверхностей в глобальном масштабе за последние 3,7 десятилетия, а также предоставляет статистические данные об их масштабах и изменениях для поддержки принятия более информированных решений по управлению водными ресурсами.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/mapsforfreeWater.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">M-F-Free Вода<a class="layer-link" href='https://maps-for-free.com' target="_blank"><img src='../globe/images/layers/maps-for-free.ico'></a></p>
+                <p class="layer-text">Maps-For-Free предлагает бесплатные карты рельефа всего мира и другие слои, которые можно легко интегрировать в существующие проекты карт.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/bingSkl.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">MsBing Дороги<a class="layer-link" href='https://www.bing.com/maps' target="_blank"><img src='../globe/images/layers/bing_logo-16.png'></a></p>
+                <p class="layer-text">Картографический веб-сервис Bing Карты предлагает аэрофотоснимки и спутниковые снимки со всего мира. Покрытие варьируется в зависимости от региона, наиболее подробное покрытие - в США и Великобритании. Bing Maps постоянно добавляет изображения в новые области и обновляет покрытие в областях существующего покрытия.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/googleSkl.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">Google Дороги<a class="layer-link" href='https://google.com/maps' target="_blank"><img src='../globe/images/layers/google-maps-16.png'></a></p>
+                <p class="layer-text">Карты Google - это сервис бесплатных онлайн-карт от Google. Он доступен через веб-браузер или как приложение для мобильных устройств. Вы можете использовать Карты Google, чтобы найти информацию о маршрутах, местных компаниях и многое другое.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/yandexSkl.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">Yandex Дороги<a class="layer-link" href='https://yandex.com/maps' target="_blank"><img src='../globe/images/layers/yandex_logo-16.png'></a></p>
+                <p class="layer-text">Яндекс Карты - российский картографический веб-сервис, разработанный Яндексом. Сервис предоставляет подробные карты всего мира. Включает в себя поиск, информацию о пробках, маршрутах и панорамах улиц. Яндекс.Карты - самый популярный картографический сервис в России.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/cacheCoverage.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">Кэш Покрытие<a class="layer-link" href='' target="_blank"><img src='../globe/images/layers/logo-16.png'></a></p>
+                <p class="layer-text">Карта отмечает закэшированные участки изображений для каждого слоя. Чем глубже наличие изображений кэша тем плотность цвета отображения выше. При погружении отображние наличия изображений в кэше перерисовывается для более детального рассмотрения.</p>
+              </div>
+            </div>
+            
+            <div class="layer">
+              <div class="layer-image">
+                <img src='img/layers/cgiarCoverage.png'>
+              </div>
+              <div class="layer-info">
+                <p class="layer-header">Cgiar Покрытие<a class="layer-link" href='' target="_blank"><img src='../globe/images/layers/logo-16.png'></a></p>
+                <p class="layer-text">Карта отмечает участки загруженных данных высот CGIAR (Консультативная группа по международным сельскохозяйственным исследованиям) Srtm (Радиолокационная топографическая миссия шаттла).</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+    </section>
+    
+    
+    
+        <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 page">
+              
+                <h2>Контакты</h2>
+                <h3>Администрация</h3>
+                <p>Менеджмент проекта - <a href="mailto:management@1globe.ru">management@1globe.ru</a></p>
+                <p>Пожалуйста, обращайтесь с коммерческими предложениями и идеями сотрудничества.</p>
+                <h3>Поддержка</h3>
+                <p>Комманда поддержки - <a href="mailto:support@1globe.ru">support@1globe.ru</a></p>
+                <p>Если у Вас есть вопросы или проблемы с приложением, обратитесь в нашу службу поддержки.</p>
+                <p>Заметили очепятку или неточность? Сообщите, и мы всё исправим.</p>
+                <h3>Разработка</h3>
+                <p>Отдел DevOps - <a href="mailto:devops@1globe.ru">devops@1globe.ru</a></p>
+                <p>Пожалуйста, используйте этот адрес электронной почты для предложений по улучшению.</p>
+              
+                <!--
+                <h3>Forum</h3>
+                <p>
+                  The <a href="forum" target="_blank" onclick="return false;">1Globe User Forum</a>
+                  is being developed in response to requests for additional support and engagement tools.
+                </p>
+                -->
+                <!--
+                <p>The <a href="forum" target="_blank">1Globe Forum</a> is a great resource to learn more about the project. Many users are quick to help and share layers settings. Members of the development teams regularly visit the forum to answer questions and help with issues.</p>
+                -->
+                <!--
+                <br>
+                <ul class="list-inline banner-social-buttons">
+                    
+                    <li>
+                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">twitter</span></a>
+                    </li>
+                    
+                    <li>
+                        <a href="" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">facebook</span></a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://stackoverflow.com/questions/tagged/jekyll" class="btn btn-default btn-lg"><i class="fa fa-stack-overflow fa-fw"></i> <span class="network-name">stack-overflow</span></a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://bitbucket.org/jekyll" class="btn btn-default btn-lg"><i class="fa fa-bitbucket fa-fw"></i> <span class="network-name">bitbucket</span></a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">github</span></a>
+                    </li>
+                    
+                </ul>
+                -->
+            </div>
+        </div>
+    </section>
+        <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+          Copyright &copy; GK RnD Studio Ltd. 2021
+        </div>
+    </footer>
+
+     <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>-->
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/main.js "></script>
+    </body>
+</html>
